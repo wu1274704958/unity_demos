@@ -1,0 +1,6 @@
+/.vs/**
+/build/**
+/Logs/**
+/obj/**
+/Library/**
+/Temp/**
