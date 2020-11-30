@@ -21,9 +21,20 @@ public class world_bg : MonoBehaviour
         back_trans = back.GetComponent<Transform>();
 
         set_size(UnityEngine.Screen.width * w_rate, UnityEngine.Screen.height);
+        set_x(UnityEngine.Screen.width / 100f / 2f);
+        set_bk_x(trans.position.x + get_gap());
         
-        back_trans.position = new Vector3(trans.position.x + get_gap(), 0f, 0f);
         set_size_bk(UnityEngine.Screen.width * w_rate, UnityEngine.Screen.height);
+    }
+
+    void set_x(float x)
+    {
+        trans.position = new Vector3(x, 0f, 0f);
+    }
+
+    void set_bk_x(float x)
+    {
+        back_trans.position = new Vector3(x, 0f, 0f);
     }
 
     float get_gap()
