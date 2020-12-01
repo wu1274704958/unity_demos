@@ -27,7 +27,7 @@ public class happ : MonoBehaviour
     {
         if (!pressed)
         {
-            scale_v += scale_zl;
+            scale_v += scale_zl * Time.deltaTime;
             float s = (Mathf.Sin(scale_v) * scale_s) + 1f;
             trans.localScale = new Vector3(s, s);
         }

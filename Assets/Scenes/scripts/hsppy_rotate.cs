@@ -21,7 +21,7 @@ public class hsppy_rotate : MonoBehaviour
     {
        
         {
-            rotate_v += rotate_zl;
+            rotate_v += rotate_zl * Time.deltaTime;
             float s = (Mathf.Sin(rotate_v) * rotate_s) + 1f;
             trans.localRotation = Quaternion.Euler(0f,0f,s);
         }
