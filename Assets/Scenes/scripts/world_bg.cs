@@ -21,6 +21,11 @@ public class world_bg : MonoBehaviour
     public float speed = -0.01f;
     public float real_width = 0f;
 
+    private void Awake()
+    {
+        real_width = UnityEngine.Screen.width / 100f;//aspect_ratio * Size.y;
+    }
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -30,8 +35,6 @@ public class world_bg : MonoBehaviour
         back_trans = back.GetComponent<Transform>();
 
         float aspect_ratio = UnityEngine.Screen.width / UnityEngine.Screen.height;
-        real_width = UnityEngine.Screen.width / 100f;//aspect_ratio * Size.y;
-
         
 
         set_size(SIZE.x * w_rate, SIZE.y);
@@ -57,7 +60,7 @@ public class world_bg : MonoBehaviour
 
     float get_gap()
     {
-        return sr.size.x;
+        return sr.size.x - 0.001f;
     }
     void set_size(float w,float h)
     {

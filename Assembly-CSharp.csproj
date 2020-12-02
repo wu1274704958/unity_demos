@@ -63,6 +63,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\52SpecialEffectPack\Animation&amp;Script\csAnimationSpin.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\Animation&amp;Script\csDestroyEffect.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\Animation&amp;Script\csMouseOrbit.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\Animation&amp;Script\csParticleMove.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\Animation&amp;Script\csShowAllEffect.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\EffectEditor\ShurikenEffectEditor\csShurikenEffectChanger.cs" />
+    <Compile Include="Assets\52SpecialEffectPack\EffectEditor\ShurikenEffectEditor\csShurikenEffectEditor.cs" />
     <Compile Include="Assets\Scenes\instation.cs" />
     <Compile Include="Assets\Scenes\lift.cs" />
     <Compile Include="Assets\Scenes\rotate2.cs" />
@@ -70,7 +77,9 @@
     <Compile Include="Assets\Scenes\scripts\bg.cs" />
     <Compile Include="Assets\Scenes\scripts\happ.cs" />
     <Compile Include="Assets\Scenes\scripts\hsppy_rotate.cs" />
+    <Compile Include="Assets\Scenes\scripts\plane.cs" />
     <Compile Include="Assets\Scenes\scripts\ready.cs" />
+    <Compile Include="Assets\Scenes\scripts\tigger.cs" />
     <Compile Include="Assets\Scenes\scripts\world_bg.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/program/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
