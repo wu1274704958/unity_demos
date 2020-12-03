@@ -730,7 +730,7 @@ MonoBehaviour:
     type: 3}
   perfab_pressedObj: {fileID: 1828929965690981043, guid: 402f4e79845d0554f98371038966280b,
     type: 3}
-  perfab_explode: {fileID: 2804881341085114054, guid: 415960adde8de9c4c987a1e6cae1e4a7,
+  perfab_explode: {fileID: 5419543460849693542, guid: 0388797b326afdb4db27bbdb7a7ef9bc,
     type: 3}
   bgObj: {fileID: 1088180921}
   birth_pos: {x: 0, y: 0}

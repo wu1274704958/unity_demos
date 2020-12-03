@@ -13,7 +13,7 @@ public class Utils
 
     public static void Delay(MonoBehaviour obj,System.Action action, float delaySeconds)
     {
-        obj.StartCoroutine(Utils.DelayToInvokeDo(action, 0.32f));
+        obj.StartCoroutine(Utils.DelayToInvokeDo(action, delaySeconds));
     }
 
 }

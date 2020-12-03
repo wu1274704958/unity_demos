@@ -45,11 +45,12 @@ public class plane : MonoBehaviour
     public void down()
     {
         body2D.AddForce(froce);
-        GameObject explode = GameObject.Instantiate(pf_explode);
     }
 
     public void dead()
     {
-
+        GameObject explode = GameObject.Instantiate(pf_explode);
+        explode.transform.position = this.transform.position;
+        Destroy(gameObject);
     }
 }
