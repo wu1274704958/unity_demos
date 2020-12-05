@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 2722472892
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: plane_ab.ab
+      Dependencies: {}

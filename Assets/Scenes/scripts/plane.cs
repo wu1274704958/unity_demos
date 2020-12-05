@@ -14,9 +14,15 @@ public class plane : MonoBehaviour
 
     public delegate void Dead();
     public event Dead e_dead;
+
+    public float world_h_1_2 = 2.4f;
+    public float self_h_1_2 = 0f;
+    private PolygonCollider2D collider2D;
     void Start()
     {
         body2D = GetComponent<Rigidbody2D>();
+        collider2D = GetComponent<PolygonCollider2D>();
+        self_h_1_2 = collider2D.bounds.size.y / 2f;
         tigger tigger_ = pressedObj.GetComponent<tigger>();
         if(tigger_)
         {
@@ -27,7 +33,8 @@ public class plane : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.y > (world_h_1_2 - self_h_1_2) || transform.position.y < -(world_h_1_2 - self_h_1_2))
+            dead();
     }
 
 
@@ -52,5 +59,7 @@ public class plane : MonoBehaviour
         GameObject explode = GameObject.Instantiate(pf_explode);
         explode.transform.position = this.transform.position;
         Destroy(gameObject);
+
+        e_dead.Invoke();
     }
 }

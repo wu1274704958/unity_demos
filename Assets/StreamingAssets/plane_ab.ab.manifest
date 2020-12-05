@@ -1,0 +1,41 @@
+ManifestFileVersion: 0
+CRC: 4205815217
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6fab58260ddf4a8463116d73e0ca2fe5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e466b938ff79eba211d4eafdb199a0df
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Scenes/Planes/planeYellow3.png
+- Assets/Scenes/Planes/planeRed2.png
+- Assets/Scenes/Planes/green.anim
+- Assets/Scenes/Planes/planeGreen1.controller
+- Assets/Scenes/Planes/planeRed3.png
+- Assets/Scenes/Planes/planeBlue3.png
+- Assets/Scenes/Planes/planeYellow1.png
+- Assets/Scenes/Planes/yellow.anim
+- Assets/Scenes/Planes/planeGreen2.png
+- Assets/Scenes/Planes/planeBlue1.controller
+- Assets/Scenes/Planes/planeBlue1.png
+- Assets/Scenes/Planes/planeYellow2.png
+- Assets/Scenes/Planes/planeBlue2.png
+- Assets/Scenes/Planes/planeYellow1.controller
+- Assets/Scenes/Planes/planeRed1.controller
+- Assets/Scenes/Planes/planeRed1.png
+- Assets/Scenes/Planes/planeGreen3.png
+- Assets/Scenes/Planes/planeGreen1.png
+- Assets/Scenes/Planes/blue.anim
+- Assets/Scenes/Planes/red.anim
+Dependencies: []

@@ -733,6 +733,7 @@ MonoBehaviour:
   perfab_explode: {fileID: 5419543460849693542, guid: 0388797b326afdb4db27bbdb7a7ef9bc,
     type: 3}
   bgObj: {fileID: 1088180921}
+  type: 0
   birth_pos: {x: 0, y: 0}
 --- !u!1 &1426040269
 GameObject:

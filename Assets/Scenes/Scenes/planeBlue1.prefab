@@ -184,4 +184,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotate_speed: 145
   pressedObj: {fileID: 0}
+  readyObj: {fileID: 0}
   froce: {x: 0, y: 100}
+  pf_explode: {fileID: 0}
+  world_h_1_2: 2.4
+  self_h_1_2: 0
