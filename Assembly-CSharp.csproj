@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scenes\instation.cs" />
     <Compile Include="Assets\Scenes\lift.cs" />
     <Compile Include="Assets\Scenes\rotate2.cs" />
+    <Compile Include="Assets\Scenes\scripts\CreateGround.cs" />
     <Compile Include="Assets\Scenes\scripts\RollObj.cs" />
     <Compile Include="Assets\Scenes\scripts\Utils.cs" />
     <Compile Include="Assets\Scenes\scripts\auto_destroy.cs" />

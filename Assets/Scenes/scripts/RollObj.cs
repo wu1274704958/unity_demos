@@ -8,8 +8,13 @@ namespace Assets.Scenes.scripts
         private CachePool<GameObject,Args,T> pool;
         public Vector2 offset = Vector2.zero;
         public bool floor = true;
+        public float speed;
+
         private int repeat = 0;
         private S size;
+        private float _y;
+        private float y_filp = 1;
+
 
         public RollObj()
         {
@@ -20,14 +25,24 @@ namespace Assets.Scenes.scripts
         // Use this for initialization
         void Start()
         {
+            calc_y();
+
             float x = 0;
+            
             while(x < size.width())
             {
                 GameObject g = pool.take(getArgs());
-                g.transform.position = new Vector3(x, 0);
+                
                 PolygonCollider2D collider2D = g.GetComponent<PolygonCollider2D>();
+                g.transform.position = new Vector3(x, _y + (collider2D.bounds.size.y * y_filp) / 2f);
                 x += collider2D.bounds.size.x;
             }
+        }
+
+        public void calc_y()
+        {
+            y_filp = floor ? -1f : 1f;
+            _y = y_filp * size.height() / 2f;
         }
 
         virtual public Args getArgs()
