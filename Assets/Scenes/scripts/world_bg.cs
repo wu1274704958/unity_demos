@@ -11,6 +11,8 @@ public class world_bg : MonoBehaviour
     Transform trans;
     Transform back_trans;
 
+    public GameObject camera;
+
     public static Vector2 Size = new Vector2(8f,4.8f);
     public static Vector2 SIZE = new Vector2(800f, 480f);
 
@@ -23,7 +25,9 @@ public class world_bg : MonoBehaviour
 
     private void Awake()
     {
-        real_width = UnityEngine.Screen.width / 100f;//aspect_ratio * Size.y;
+        float size = camera.GetComponent<Camera>().orthographicSize;
+        float ratio = Screen.width * 1f / Screen.height;
+        real_width = size * 2f * ratio;
     }
 
     void Start()

@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Assets
 {
-    public class CachePool<Rt,Args,T> where Rt:class where T:ICreater<Args,Rt> 
+    public class CachePool<Rt,Args,T> where Rt:class where T:ICreater<Args,Rt> ,new()
     {
         private ArrayList active;
         private ArrayList rest;
@@ -11,6 +11,7 @@ namespace Assets
 
         public CachePool()
         {
+            creater = new T();
             active = new ArrayList();
             rest = new ArrayList();
         }
@@ -41,6 +42,11 @@ namespace Assets
                 active.RemoveAt(idx);
                 rest.Add(r);
             }
+        }
+
+        public void apply(Rt r,Args a)
+        {
+            creater.apply(r, a);
         }
     }
 }

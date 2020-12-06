@@ -441,6 +441,9 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
+  - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -513,6 +516,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8e2cae8447e7244937d5383d3a088d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 8.05, y: 0.35}
+  floor: 1
+  speed: -0.6
+  repeat: 0
+  _y: 0
+  y_filp: 1
+  bx: 4.03
+  min_count: 2
+  rand_min: 0
+  rand_max: 0
+  random: 0
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9695dbd4f746635458ccf1f029945c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 4, y: -1.1}
+  floor: 0
+  speed: -0.6
+  repeat: 0
+  _y: 0
+  y_filp: 1
+  bx: 4.9
+  min_count: 4
+  rand_min: 0
+  rand_max: 0.2
+  random: 1
+--- !u!114 &963194231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea08cee2bad5e04e84278a8aa9be411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 4, y: 1.1}
+  floor: 1
+  speed: -0.6
+  repeat: 0
+  _y: 0
+  y_filp: 1
+  bx: 6.9
+  min_count: 4
+  rand_min: 0
+  rand_max: 0.34
+  random: 1
 --- !u!1 &1088180921
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8588a016d6514ce44b7453aa974e5a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 963194225}
   x_offset: 0
   w_rate: 2
   back: {fileID: 1426040269}

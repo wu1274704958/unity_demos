@@ -1,38 +1,68 @@
 ManifestFileVersion: 0
-CRC: 4205815217
+CRC: 3529105891
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6fab58260ddf4a8463116d73e0ca2fe5
+    Hash: 460df002d7f3f053976a50ab43d6dbc0
   TypeTreeHash:
     serializedVersion: 2
-    Hash: e466b938ff79eba211d4eafdb199a0df
+    Hash: 3c4544cfb55ab7f91913d28ef0715951
 HashAppended: 0
 ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 50
+  Script: {instanceID: 0}
+- Class: 60
   Script: {instanceID: 0}
 - Class: 74
   Script: {instanceID: 0}
 - Class: 91
+  Script: {instanceID: 0}
+- Class: 212
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
 Assets:
 - Assets/Scenes/Planes/planeYellow3.png
 - Assets/Scenes/Planes/planeRed2.png
+- Assets/Scenes/prefab/groundDirt.prefab
 - Assets/Scenes/Planes/green.anim
 - Assets/Scenes/Planes/planeGreen1.controller
 - Assets/Scenes/Planes/planeRed3.png
 - Assets/Scenes/Planes/planeBlue3.png
+- Assets/Scenes/textures/rockIceDown.png
+- Assets/Scenes/textures/rockGrass.png
+- Assets/Scenes/textures/groundSnow.png
+- Assets/Scenes/textures/rock.png
+- Assets/Scenes/textures/rockGrassDown.png
 - Assets/Scenes/Planes/planeYellow1.png
 - Assets/Scenes/Planes/yellow.anim
+- Assets/Scenes/textures/groundGrass.png
 - Assets/Scenes/Planes/planeGreen2.png
+- Assets/Scenes/textures/groundDirt.png
+- Assets/Scenes/textures/groundIce.png
+- Assets/Scenes/textures/groundRock.png
+- Assets/Scenes/textures/rockDown.png
 - Assets/Scenes/Planes/planeBlue1.controller
 - Assets/Scenes/Planes/planeBlue1.png
+- Assets/Scenes/textures/rockSnowDown.png
 - Assets/Scenes/Planes/planeYellow2.png
+- Assets/Scenes/prefab/rockDown.prefab
 - Assets/Scenes/Planes/planeBlue2.png
 - Assets/Scenes/Planes/planeYellow1.controller
+- Assets/Scenes/textures/rockSnow.png
 - Assets/Scenes/Planes/planeRed1.controller
+- Assets/Scenes/prefab/rock.prefab
+- Assets/Scenes/textures/rockIce.png
 - Assets/Scenes/Planes/planeRed1.png
 - Assets/Scenes/Planes/planeGreen3.png
 - Assets/Scenes/Planes/planeGreen1.png

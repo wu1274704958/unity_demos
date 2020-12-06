@@ -1,42 +1,75 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 namespace Assets.Scenes.scripts
 {
-    public class RollObj<Args,T,S> : MonoBehaviour where T : ICreater<Args, GameObject> where S:ISize,new() where Args:new()
+    public abstract class RollObj<Args,T,S> : MonoBehaviour where T : ICreater<Args, GameObject>,new() where S:ISize,new() where Args:new()
     {
-        private CachePool<GameObject,Args,T> pool;
-        public Vector2 offset = Vector2.zero;
+        
+        public Vector2 offset = new Vector2(1f,1f);
         public bool floor = true;
         public float speed;
 
-        private int repeat = 0;
-        private S size;
-        private float _y;
-        private float y_filp = 1;
+        protected CachePool<GameObject, Args, T> pool;
+        public int repeat = 0;
+        public S size;
+        public float _y;
+        public float y_filp = 1;
+        public float bx;
+        public int min_count = 1;
+        public ArrayList list;
+        public float rand_min = 0f,rand_max = 0f;
+        public bool random = false;
 
 
         public RollObj()
         {
+            list = new ArrayList();
             size = new S();
             pool = new CachePool<GameObject, Args, T>();
         }
 
         // Use this for initialization
-        void Start()
+        virtual public void Start()
         {
             calc_y();
 
-            float x = 0;
-            
-            while(x < size.width())
+            GameObject last = pool.take(getArgs());
+            float x = -size.width() / 2f;
+            last = Instantiate(last);
+
+            x += bx;
+            do
             {
                 GameObject g = pool.take(getArgs());
+                g = Instantiate(g);
+                print("instance......... " + x +" " + (_y + offset.y));
+                g.transform.position = new Vector3(x, _y + offset.y);
+                x += offset.x;
+                list.Add(g);
                 
-                PolygonCollider2D collider2D = g.GetComponent<PolygonCollider2D>();
-                g.transform.position = new Vector3(x, _y + (collider2D.bounds.size.y * y_filp) / 2f);
-                x += collider2D.bounds.size.x;
+            } 
+            while (x < size.width() / 2f || list.Count < min_count);
+            apply_last(last);
+            repeat = list.Count;
+        }
+
+        virtual protected void apply_last(GameObject last_)
+        {
+            float r = 0f;
+            if(random)
+            {
+                r = UnityEngine.Random.Range(rand_min, rand_max);            
             }
+            last_.transform.position = new Vector3(last().transform.position.x + offset.x + r
+                , last().transform.position.y);
+            list.Add(last_);
+        }
+
+        protected GameObject last()
+        {
+            return list[list.Count - 1] as GameObject;
         }
 
         public void calc_y()
@@ -45,15 +78,30 @@ namespace Assets.Scenes.scripts
             _y = y_filp * size.height() / 2f;
         }
 
-        virtual public Args getArgs()
+        abstract public Args getArgs();
+
+        virtual public bool need_refresh()
         {
-            return new Args();
+            return false;
         }
 
         // Update is called once per frame
-        void Update()
+        virtual public void Update()
         {
-
+            for(int i = 0;i < list.Count;++i)
+            {
+                (list[i] as GameObject).transform.Translate(new Vector3(speed * Time.deltaTime,0,0));
+            }
+            GameObject g = list[0] as GameObject;
+            if(g.transform.position.x < (-size.width() / 2f + (-offset.x / 2f)))
+            {
+                list.RemoveAt(0);
+                if(need_refresh())
+                {
+                    pool.apply(g, getArgs());
+                }
+                apply_last(g);
+            }
         }
     }
 }

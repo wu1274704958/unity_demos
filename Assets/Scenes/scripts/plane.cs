@@ -62,4 +62,10 @@ public class plane : MonoBehaviour
 
         e_dead.Invoke();
     }
+
+
+    void OnTriggerEnter2D(Collider2D collidedObject)
+    {
+        dead();
+    }
 }

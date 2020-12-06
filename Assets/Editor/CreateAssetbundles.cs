@@ -9,8 +9,7 @@ public class CreateAssetbundles : MonoBehaviour
     [MenuItem("AssetsBundle/Build AssetBundles")]
     static void BuildAllAssetBundles()//进行打包
     {
-        string dir = "Assets/";
-        dir += app.ABDir;
+        string dir = app.ABDir;
         //判断该目录是否存在
         if (Directory.Exists(dir) == false)
         {
