@@ -559,8 +559,8 @@ MonoBehaviour:
   y_filp: 1
   bx: 4.9
   min_count: 4
-  rand_min: 0
-  rand_max: 0.2
+  rand_min: -0.32
+  rand_max: 0.32
   random: 1
 --- !u!114 &963194231
 MonoBehaviour:
@@ -583,8 +583,8 @@ MonoBehaviour:
   bx: 6.9
   min_count: 4
   rand_min: 0
-  rand_max: 0.34
-  random: 1
+  rand_max: 0
+  random: 0
 --- !u!1 &1088180921
 GameObject:
   m_ObjectHideFlags: 0
